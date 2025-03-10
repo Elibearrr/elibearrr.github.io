@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    background-color: #FFFFFF;
+    font-family: "Protest Riot", sans-serif;
+    overflow: hidden;
+  }
+  
+  .container {
+    height: 100vh;
+    margin: 0 auto;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cat-img {
+    width: 30rem;
+    height: 30rem;
+    margin-bottom: 2rem;
+  }
+  
+  .title {
+    font-size: 3.6rem;
+    color: #2A2A2A;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  
+    gap: 1rem;
+  }
+  
+  .btn {
+    padding: 1.5rem 2.5rem;
+    border: none;
+    border-radius: 4px;
+  
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .btn--yes {
+    background-color: #40c057;
+  }
+  
+  .btn--no {
+    background-color: #f03e3e;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  :root {
+    --main-color: #ff5678;
+    --seceondary-color: #ff304f;
+    --heart-size: 20px;
+  }
+
+  .heart {
+    position:absolute;
+    width: var(--heart-size);
+    height: var(--heart-size);
+    background: red;
+    transform: rotate(45deg);
+    animation: fall 2.5s linear
+  }
+
+  .heart::before,
+  .heart::after{
+    content:"";
+    position:absolute;
+    width: var(--heart-size);
+    height: var(--heart-size);
+    background: red;
+    border-radius:50%;
+  }
+
+  .heart::before{
+    top: -10px;
+    left: 0;
+  }
+
+  .heart::after{
+    top:0;
+    left: -10px;
+  }
+
+  @keyframes fall{
+    0% {
+        top: -50px;
+        opacity: 1;
+    }
+    100% {
+        top: 100vh;
+        opacity: 0;
+        transform: rotate(90deg); 
+    }
+
+  }
